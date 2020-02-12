@@ -1,0 +1,27 @@
+package uRI;
+import java.util.*;
+
+public class P1117 {
+
+	public static void main(String[] args) {
+		Scanner num = new Scanner(System.in);
+		int x,y; //declaring variables for two input
+		int total=0; //declaring variables for storing total
+		x = num.nextInt();
+		y = num.nextInt();
+		if(x>y) {
+			for(int i=y; i<=x; i++) {
+				if(i%13!=0) {
+					total+=i;
+				}
+			}
+		} else if(y>x) {
+			for(int i=x; i<=y; i++) {
+				if(i%13!=0) {
+					total+=i;
+				}
+			}
+		}
+		System.out.println(total);
+		}
+	}
