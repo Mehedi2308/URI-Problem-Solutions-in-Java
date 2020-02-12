@@ -1,0 +1,40 @@
+package uRI;
+import java.util.*;
+
+public class P1117 {
+
+	public static void main(String[] args) {
+		Scanner num = new Scanner(System.in);
+		int winter=0, wgremio=0, draw=0;  //declaring variable for individual win and draw number
+		int choice= 1;                  //declaring variable to store peoples choice
+		int count = 0;                //declaring variable to count total GRENAIS
+		int inter, gremio;          //declaring variable for individuals goal input
+		do{                    //logics
+			count += 1;
+			inter = num.nextInt();
+			gremio = num.nextInt();
+			if(inter>gremio) {
+				winter += 1;
+			} else if(inter<gremio) {
+				wgremio+=1;
+			} else {
+				draw+=1;
+			}
+			System.out.println("Novo grenal (1-sim 2-nao)");
+			choice = num.nextInt();
+		} while(choice>0 && choice<2);        //looping
+	
+		System.out.println(count + " grenais");
+		System.out.println("Inter:"+ winter);
+		System.out.println("Gremio:"+ wgremio);
+		System.out.println("Empates:"+ draw);
+		if(winter>wgremio) {
+			System.out.println("Inter venceu mais");
+		} else if(winter>wgremio) {
+			System.out.println("Gremio venceu mais");
+		} else
+		System.out.println("Não houve vencedor" );
+		
+		num.close();
+		}
+	}
