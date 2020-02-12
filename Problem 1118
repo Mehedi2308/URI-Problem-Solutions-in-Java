@@ -1,0 +1,32 @@
+import java.io.IOException;
+import java.util.*;
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+		Scanner num = new Scanner(System.in);
+		int option=0; //local variable to store user choice
+		do {
+			float mark, total=0; //declaring two variables for mark sand their total
+			int k=0; //for while loop
+			while(k!=2){
+			mark = num.nextFloat(); //getting first mark
+			if(mark<0||mark>10){	//validating mark
+				System.out.println("nota invalida");
+			} else {
+				total+=mark; //adding marks
+				k+=1;
+			}
+		}
+			float media = total/2;
+			System.out.printf("media = %.2f\n", media);
+			option -=1; //resetting user choice value to zero
+		while(option!=2&&option!=1) {
+			System.out.println("novo calculo (1-sim 2-nao)");
+			option=num.nextInt();
+			}
+		} while(option>0&&option<2);
+		num.close();
+ 
+    }
+ 
+}
