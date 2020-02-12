@@ -1,0 +1,24 @@
+package uRI;
+import java.util.*;
+
+public class P1117 {
+
+	public static void main(String[] args) {
+		Scanner num = new Scanner(System.in);
+		float mark=0,total=0;       //declaring variable for and mark and total mark
+		int k=0;
+		while(k!=2) {               //initiating while loop for getting two respective value for mark
+			mark = num.nextFloat();
+			if(mark<0||mark>10.0) {   //validating conditions for mark
+			System.out.println("nota invalida");
+		} else {
+			total+=mark;             
+			k+=1;
+		} //end of validation
+		} //end of loop
+		float media = total/2;
+		System.out.printf("media = %.2f \n",media);
+		
+		num.close();
+		}
+	}
