@@ -1,0 +1,14 @@
+import java.io.IOException;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+		float S=0,x;
+		for(float i=1; i<101; i++) {
+			x=1/i;
+			S+=x;
+		}
+		System.out.printf("%.2f\n",S);
+    }
+ 
+}
