@@ -1,0 +1,16 @@
+import java.io.IOException;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+		float S=0,x,z=1;
+		for(float i=1; i<=39; i+=2) {
+			x=i/z;
+			S+=x;
+			z*=2;
+		}
+		System.out.printf("%.2f\n",S);
+ 
+    }
+ 
+}
