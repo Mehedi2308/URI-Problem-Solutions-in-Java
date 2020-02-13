@@ -1,0 +1,24 @@
+package uRI;
+import java.util.*;
+
+public class P1117 {
+
+	public static void main(String[] args) {
+		Scanner num = new Scanner(System.in);
+		int X=0;
+		int Z=X;
+		int count=0;
+		
+		X = num.nextInt();
+		while(Z<=X) {
+			Z= num.nextInt();
+		}
+		for(int sum=0;sum<Z;sum=sum) {
+			sum+=X;
+			X++;
+			count++;
+		}
+		System.out.println(count);
+		num.close();
+		}
+	}
