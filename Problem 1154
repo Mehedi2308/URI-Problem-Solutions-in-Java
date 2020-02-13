@@ -1,0 +1,22 @@
+package uRI;
+import java.util.*;
+
+public class P1117 {
+
+	public static void main(String[] args) {
+		Scanner num = new Scanner(System.in);
+		int X=0;
+		float count=0,sum=0;
+
+		while(X>=0) {
+			X = num.nextInt();
+			if(X>=0){
+			sum+=X;
+			count+=1;
+			}
+		}
+		float media =sum/count;
+		System.out.printf("%.2f\n",media);
+		num.close();
+		}
+	}
