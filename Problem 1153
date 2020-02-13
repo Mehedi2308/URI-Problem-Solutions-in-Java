@@ -1,0 +1,20 @@
+import java.io.IOException;
+import java.util.*; 
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+		Scanner num = new Scanner(System.in);
+		int X;
+		int factorial=1;
+		
+		X = num.nextInt();
+		for(int i=X; i>0; i--) {
+			factorial*=X;
+			X--;
+		}
+		System.out.println(factorial);
+		num.close();
+    }
+ 
+}
