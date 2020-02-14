@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.util.*; 
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+		Scanner num = new Scanner(System.in);
+		int[] A = new int[20];
+		int[] B = new int[20];
+		for(int i=0;i<20;i++){
+			A[i] = num.nextInt();
+		}
+		int k=19,l=0;
+		for(int j=19; j>=0; j--){
+			B[j]=A[k];
+			System.out.println("N["+l+"] = "+B[j]);
+			k--;
+			l++;
+		}
+ 
+    }
+ 
+}
