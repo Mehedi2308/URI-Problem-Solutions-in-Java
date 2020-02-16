@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.util.*; 
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+		Scanner num = new Scanner(System.in);
+		int N=1;
+		int pos=0;
+		int smallest = 0;
+		N = num.nextInt();
+		int[] a = new int[N];
+		for(int i=0; i<N;i++) {
+		int X = num.nextInt();
+		a[i]=X;
+		}
+		smallest=a[0];
+		for(int i=0; i<N; i++) {
+			if(smallest>a[i]) {
+				smallest=a[i];
+				pos =i;
+			}
+		}
+		System.out.println("Menor valor: "+ smallest);
+		System.out.println("Posicao: "+ pos);
+    }
+}
