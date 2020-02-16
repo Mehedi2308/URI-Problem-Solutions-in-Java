@@ -1,0 +1,24 @@
+package codeChef;
+import java.util.*;
+
+public class thePromisedLand {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner inp = new Scanner(System.in);
+		double T = inp.nextDouble();
+		if(T>=0&&T<=100) {
+			if(T>=0&&T<=25) {
+			System.out.println("Intervalo [0,25]");
+			}else if(T>25&&T<=50) {
+			System.out.println("Intervalo (25,50]");
+			}else if(T>50&&T<=75) {
+			System.out.println("Intervalo (50,75]");
+			}else if(T>75&&T<=100) {
+				System.out.println("Intervalo (75,100]");
+			}
+		} else {
+		System.out.println("Fora de intervalo");
+		}
+	}
+}
