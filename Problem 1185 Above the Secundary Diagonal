@@ -1,0 +1,33 @@
+import java.io.IOException;
+import java.util.*;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+		Scanner num = new Scanner(System.in);
+		char letter = num.next().charAt(0);
+		double[][] arr = new double[12][12];
+		double sum = 0;
+
+		for(int i=0; i<12; i++) {
+			for(int j=0; j<12;j++){
+				arr[i][j] = num.nextDouble();
+				}
+			}
+		int count = 0, col=10;
+		for(int i=0;i<11;i++) {
+			for(int j=col;j>=0;j--) {
+				sum+=arr[i][j];
+			    count++;
+         }
+			col--;
+		}
+
+		if(letter == 'S') {
+			System.out.printf("%.1f\n",sum);
+		}else if(letter == 'M') {
+			System.out.printf("%.1f\n",sum/count);
+		}
+	num.close();
+    }
+   }
