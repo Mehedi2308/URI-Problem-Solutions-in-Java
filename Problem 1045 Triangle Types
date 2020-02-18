@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.util.*; 
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+	Scanner num = new Scanner(System.in);
+		double X  = num.nextDouble();
+		double Y  = num.nextDouble();
+		double Z  = num.nextDouble();
+		double A = Math.max(X, Math.max(Y, Z));
+		double B=0,C=0;
+		if(A==X) {
+			B=Math.max(Y, Z);
+			C=Math.min(Y, Z);
+		}
+		if(A==Y) {
+			B=Math.max(X, Z);
+			C=Math.min(X, Z);
+		}
+		if(A==Z) {
+			B=Math.max(X, Y);
+			C=Math.min(X, Y);
+		}
+		
+		if(A>=(B+C)) {
+			System.out.println("NAO FORMA TRIANGULO");
+		} else if (A*A==(B*B)+(C*B)) {
+			System.out.println("TRIANGULO RETANGULO");
+		}else if (A*A>(B*B+C*B)) {
+			System.out.println("TRIANGULO OBTUSANGULO");
+		}else if (A*A<(B*B+C*B)) {
+			System.out.println("TRIANGULO ACUTANGULO");
+		}
+		if(A==B && B==C && C==A) {
+			System.out.println("TRIANGULO EQUILATERO");
+		} else if((A==B && A!=C && B!=C) || (B==C && B!=A && C!=A) || (C==A && A!=B && C!=B)){
+			System.out.println("TRIANGULO ISOSCELES");
+		}
+
+	num.close();
+    }
+ 
+}
